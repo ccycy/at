@@ -1,0 +1,67 @@
+
+/*
+*   大标题
+*/
+.unit{
+    margin-top: 30rpx;
+    width: 100%;
+    height: 200rpx;
+}
+
+/*
+*   单元
+*/
+.unit-item{
+    margin: 20rpx 20rpx 40rpx 40rpx;
+    padding-top: 20rpx;
+    padding-left: 80rpx;
+}
+
+.unit-name{
+    font-size: 16px;
+    background-color: green;
+    padding: 15rpx 50rpx;
+    border-radius: 30rpx;
+    color: white;
+}
+
+
+.classHour{
+    margin-top: 25rpx;
+}
+
+.classHour-name{
+    font-size: 14px;
+}
+.classHour-name::before{
+    content: "";
+    width: 100rpx;
+    height: 40rpx;
+    border-left: 1px dashed #999999;
+    border-bottom: 1px dashed #999999;
+    display: inline-block;
+    margin: 0 20rpx 5rpx 50rpx;
+}
+
+/*
+*   自定义一个弹窗
+*/
+
+.modal-button{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    margin: 50rpx;
+}
+.modal-img{
+    width: 80rpx;
+    height: 80rpx;
+    margin:40rpx 0;
+}
+
+.modal-title{
+    font-size: 16px;
+    margin-bottom: 20rpx;
+}

@@ -1,0 +1,17 @@
+page{
+    background-image: url(http://img1.3lian.com/2015/w6/53/d/7.jpg)
+}
+
+.modal-mask{
+    z-index: -1;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+/*
+*   再次听写按钮
+*/
+.change{
+    margin-top: 130rpx;
+}
+

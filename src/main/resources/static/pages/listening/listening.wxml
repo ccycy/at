@@ -1,0 +1,57 @@
+<!--整个页面的遮罩层-->
+<view class='modal-mask'></view>
+
+<!--关闭和睁闭眼-->
+<view class='lisNav'>
+    <image src='../../img/icon/close.svg' mode='aspectFill'
+catchtap='singOut'></image>
+    <image src='{{ eyeImg }}'mode='aspectFill'
+catchtap='changeEyes'    ></image>
+</view>
+
+
+<!--显示/不显示要听写的词语-->
+<view class='lisContent'>
+    <!--不显示词-->
+     <image wx:if = "{{ showImg }}" src='{{ showImgSrc }}' mode='aspectFill' class='contentImg'style="{{ runCircle }}" ></image>
+
+    <!--显示词-->
+    <scroll-view wx:if = "{{ showWords }}"class='contentText' scroll-y = "{{ true }}" >
+        <text class='contentWords' wx:for = "{{ wordsList }}" wx:key ="id">{{ item.WORD }}</text>
+    </scroll-view>
+
+</view>
+
+<!--最下面三个控制-->
+<view class='lisFoot'>
+    <image src='../../img/icon/more.svg' mode='aspectFill' catchtap='changeMore'></image>
+    <audio src='../../audio/feng.mp3' id='audioId'><image src='{{ startImg }}'
+catchtap='changeMusic'mode='aspectFill'></image></audio>
+    <image src='../../img/icon/mode_switching.svg'mode='aspectFill'></image>
+</view>
+
+<view class='change'catchtap = "changeA">
+    <image src='../../img/icon/correct.svg' mode='aspectFill' class='changeI'></image>
+    <text class='changeT'>点此批改</text>
+</view>
+
+
+<!--最下面三个控制最右边的按钮 弹窗-->
+<view class='modal-mask1'wx:if = "{{ modal1 }}" catchtap='modalChange0'>
+    <view class='{{ modal1show }}' >
+        <view class='content-item' catchtap='noModalChange'>
+            <text class='item-title' >间隔</text>
+            <slider class='item-sli' min='1' max='10' step='1' value='5' block-size='15' show-value='true' bindchange='modalChange1'></slider>
+        </view>
+
+        <view class='content-item' catchtap='noModalChange'>
+            <text class='item-title'>连续</text>
+            <slider class='item-sli' min='1' max='3' step='1' value='1' block-size='15' show-value='true' bindchange='modalChange2'></slider>
+        </view>
+
+        <view class='content-item' catchtap='noModalChange'>
+            <text class='item-title'>重复</text>
+            <slider class='item-sli' min='1' max='5' step='1' value='2' block-size='15' show-value='true' bindchange='modalChange3'></slider>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/unit/unit.wxml-->
+<image src='{{ imgSrc }}'class="unit"mode='aspectFill'></image>
+
+<!--单元课表列表-->
+<view class='unit-item'wx:for = "{{ unitList }}" wx:key = "{{ unitId }}">
+    <text class='unit-name'>{{ item.unitName }}</text>
+    <view class='classHour' catchtap='tan' data-hourid="{{ hourList.hourId }}"
+        wx:for = "{{ item.hourList }}" wx:key = "{{ hourID }}"   wx:for-item = "hourList"    >
+        <text class='classHour-name'>{{ hourList.hourName }}</text>
+    </view>
+</view>
+
+
+<!--自定义弹窗-->
+<view class='modal-mask'wx:if = "{{ able }}" catchtap = 'myClose'>
+    <view class='modal-button'catchtap='allWord'>
+        <image src='../../img/icon/all.svg' class='modal-img'></image>
+        <text class='modal-title'>全部听写</text>
+    </view>
+
+    <view class='modal-button'catchtap='partWord'>
+        <image src='../../img/icon/part.svg' class='modal-img'></image>
+        <text class='modal-title'>随机听写</text>
+    </view>
+
+</view>

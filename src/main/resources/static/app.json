@@ -1,0 +1,39 @@
+{
+    "pages": [
+      "pages/index/index",
+      "pages/grade/grade",
+      "pages/unit/unit",
+      "pages/self/self",
+      "pages/grow/grow",
+      "pages/listening/listening",
+      "pages/amend/amend",
+      "pages/test/test"
+    ],
+    "window": {
+      "navigationBarBackgroundColor": "#918aff",
+      "navigationBarTextStyle": "white",
+      "navigationBarTitleText": "爱听写",
+      "backgroundColor": "#eeeeee",
+      "backgroundTextStyle": "dark"
+    },
+    "tabBar": {
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "标准教材",
+        "iconPath" : "img/icon/tab-1-n.png",
+        "selectedIconPath" : "img/icon/tab-1-y.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "自主听写",
+        "iconPath": "img/icon/tab-2-n.png",
+        "selectedIconPath": "img/icon/tab-2-y.png"
+      },{
+        "pagePath": "pages/grow/grow",
+        "text": "成长记录",
+        "iconPath": "img/icon/tab-3-n.png",
+        "selectedIconPath": "img/icon/tab-3-y.png"
+      }],
+      "selectedColor": "#918aff"
+    }
+}

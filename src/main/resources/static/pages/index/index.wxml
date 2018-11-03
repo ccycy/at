@@ -1,0 +1,15 @@
+<!--轮播图-->
+<swiper indicator-dots = "{{ true }}" circular = "{{ true }}" autoplay = "{{ true }}" interval = "2000">
+    <swiper-item wx:for='{{ swiList }}'wx:key="id">
+        <image src='{{ item.img }}' mode='aspectFill'></image>
+    </swiper-item>
+</swiper>
+
+<!--教材-->
+<navigator class='sub'wx:for="{{ subList }}" wx:key="id" url='../grade/grade?Gra={{ item.id }}'>
+    <text class='sub-name'>{{ item.name }}</text>
+    <image class='sub-img' src="{{ item.img }}" mode='aspectFill'></image>
+    <text class='sub-edi sang'>{{ item.edi }}</text>
+</navigator> 
+
+<view class='blank'></view>

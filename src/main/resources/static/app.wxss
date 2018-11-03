@@ -1,0 +1,114 @@
+/*
+* 箭头
+*/
+.sang{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sang::after{
+    content: "";
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 3rpx solid #cccccc;
+    border-right: 3rpx solid #cccccc;
+    display: block;
+    transform: rotate(45deg);
+    margin-right: 10rpx;
+}
+
+/*
+* 空白条
+*/
+.blank{
+    width: 100%;
+    height: 50rpx;
+    background-color: #f1f1f1;
+}
+
+/*
+*   自定义的弹窗的遮罩层
+*/.modal-mask {
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/*
+*   播放音频界面/错词回顾  上面导航部分  中间词语部分 批改/再次听写按钮
+*/
+.lisNav{
+    display: flex;
+    justify-content: space-between;
+    margin: 40rpx 50rpx;
+}
+.lisNav image{
+    width: 50rpx;
+    height: 50rpx;
+    opacity: 0.7;
+}
+
+/*
+* 显示错词语
+*/
+.lisContent{
+    margin: 6% 10%;
+    height: 700rpx;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentText{
+    opacity: 0.7;
+    height: 700rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentWords{
+    color: white;
+    display: block;
+    margin: 30rpx 30%;
+    font-size: 20px;
+}
+
+/*
+*   批改/再次听写
+*/
+.change{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    opacity: 0.8;
+    z-index: 999;
+    padding: 15rpx 40rpx;
+    width: 60%;
+    border-radius: 50rpx;
+    box-sizing: content-box;
+    margin-left: 15%;
+    margin-bottom: 20rpx;
+}
+
+.changeT{
+    color: white;
+    font: 12px;
+}
+
+.changeI{
+    width: 70rpx;
+    height: 70rpx;
+    margin-right: 30rpx;
+}

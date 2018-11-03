@@ -1,0 +1,24 @@
+<!--pages/amend/amend.wxml-->
+
+<!--整个页面的遮罩层-->
+<view class='modal-mask'></view>
+
+<!--后退-->
+<view class='lisNav'>
+    <image src='../../img/icon/backOff.svg' mode='aspectFill'
+catchtap='backOff'></image>
+</view>
+
+
+<view class='lisContent'>
+    <!--显示错词-->
+    <scroll-view class='contentText' scroll-y = "{{ true }}" >
+        <text class='contentWords' wx:for = "{{ errorList }}" wx:key ="id">{{ item.WORD }}</text>
+    </scroll-view>
+</view>
+
+<!--重新听写-->
+<view class='change'catchtap = "changeA">
+    <image src='../../img/icon/again.svg' mode='aspectFill' class='changeI'></image>
+    <text class='changeT'>错词再次听写</text>
+</view>

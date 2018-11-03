@@ -1,0 +1,129 @@
+/*
+*   有记录
+*/
+
+/*
+*   头像
+*/
+.grow-head{
+    width: 100%;
+    height: 300rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(http://imgsrc.baidu.com/imgad/pic/item/0823dd54564e92584a234dc39782d158ccbf4e8c.jpg);
+    background-size: cover;
+}
+
+.headImg{
+    border-radius: 50%;
+    width: 200rpx;
+    height: 200rpx;
+    object-fit: cover;
+    display: block;
+}
+.head-btn{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+/*
+*   错词
+*/
+.Record{
+    height: 680rpx;
+}
+.record-item{
+    border: 1px solid #ccc;
+    margin: 20rpx;
+}
+
+.record-title::before{
+    content: '';
+    border-left: 4rpx solid red;
+    height: 40rpx;
+    display: inline-block;
+    margin: 0 10rpx;
+    position: relative;
+    top: 5rpx;
+}
+
+.record-title{
+    padding: 10rpx 0;
+    border-bottom: 1rpx solid #ccc;
+    font-size: 18px;
+    position: relative;
+}
+
+.record-content{
+    display: flex;
+}
+
+.content-item{
+    width: 33%;
+    border-right: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.content-item:nth-child(3){
+    border: 0;
+}
+
+.record-error{
+    border: 1px solid #ddd;
+    padding: 14rpx;
+}
+
+.record-all{
+    font-size: 14px;
+    margin: 30rpx 0;
+    background-color: rgb(0, 150, 136);
+    color: white;
+    border: 0;
+}
+
+.record-part{
+    font-size: 14px;
+    background-color: rgb(255, 87, 34);
+    color: white;
+    border: 0;
+}
+
+/*
+*   四个控制按钮
+*/
+.button-group{
+    display: flex;
+    justify-content: space-between;
+    margin: 30rpx 15rpx 10rpx 15rpx;
+
+}
+
+.group-time button{
+    font-size: 14px;
+}
+
+
+/*
+*   无记录
+*/
+
+.no-record{
+    text-align: center;
+    width: 80%;
+    margin: 50rpx 10%;
+}
+
+.no-record image{
+    width: 100%;
+    margin-bottom: 20rpx;
+}
+
+.no-record text{
+    color: #918aff;
+    opacity: 0.7;
+    font-size: 16px;
+    display: block;
+}

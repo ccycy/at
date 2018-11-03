@@ -1,0 +1,13 @@
+
+
+
+<navigator class='gra-item'wx:for = "{{ graList }}" wx:key = "id"
+    url='../unit/unit?Unit={{ item.id }}'>
+    <view class='gra-img'>
+        <image src='{{ item.img }}' mode='aspectFill'></image>
+    </view>
+    <view class='gra-text'>
+        <text class='gra-year'>{{ item.year }}</text>
+        <text class='gra-deta'>{{ item.deta }}</text>
+    </view>
+</navigator>

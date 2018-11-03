@@ -1,0 +1,56 @@
+<!--头像-->
+<view class='grow-head'>
+        <button class='head-btn' open-type='getUserInfo' bindgetuserinfo='getUserInfo1'>
+            <image src='{{ headImg }}'mode='aspectFill'class='headImg'></image>
+        </button>
+</view>
+
+
+<!--有听写记录-->
+<view wx:if = "{{ haveRecord }}">
+
+    <!--记录-->
+    <view class='Record'>
+        <view class='record-item' wx:for = "{{ errorList }}" wx:key = "id">
+            <view class='record-title'>{{ item.errorName }}</view>
+
+            <view class='record-content'>
+                <view class='content-item'>
+                    <view class='record-error'>错{{ item.errorNum }}词</view>
+                </view>
+                <view class='content-item'>
+                    <button class='record-all' catchtap='listen1' data-id='{{ item.id }}'>重听</button>
+                </view>
+                <view class='content-item'>
+                    <button class='record-part' catchtap='listen2' data-id='{{ item.id }}'>错词重听</button>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--四个控制按钮-->
+    <view class='button-group'>
+        <view class='group-time'><button  catchtap='toLast'>上一页</button></view>
+        <!--点击单元复习弹出选择器，选择年级-->
+        <view class='group-time'>
+            <picker value='{{ index1 }}' range='{{ pickerList1 }}' range-key='{{ "name"}}' bindchange='pickerChange1'>
+                <button>单元复习</button>
+            </picker>  
+        </view>
+        <view class='group-time'>
+            <picker value='{{ index2 }}' range='{{ pickerList2 }}' range-key='{{ "name"}}' bindchange='pickerChange2'>
+                <button>单元错词复习</button>
+            </picker>
+        </view>
+        <view class='group-time'><button catchtap='toNext'>下一页</button></view>
+    </view>
+</view>
+
+<!--没有听写记录-->
+<view wx:if = "{{ noRecord }}" class='no-record'>
+    <image src='../../img/icon/no-record.png'></image>
+    <text>{{ noRecordT }}</text>  
+</view>
+
+<!--点击单元复习弹出选择器，选择年级--->
+

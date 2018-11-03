@@ -1,0 +1,125 @@
+page{
+    background-image: url(http://img1.3lian.com/2015/w6/53/d/7.jpg)
+}
+
+.modal-mask{
+    z-index: -1;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*
+* 显示/不显示要听写的词语
+*/
+
+
+.contentImg{
+    width: 600rpx;
+    height: 600rpx;
+    border-radius: 50%;
+}
+/*
+*   旋转动画   
+*/            
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+         transform: rotate(360deg);
+    }
+}
+
+
+/*隐藏滚动条*/
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/*
+*   三个按钮
+*/
+.lisFoot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80rpx;
+}
+.lisFoot image{
+    width: 75rpx;
+    height: 75rpx;
+}
+
+/*
+*   弹窗
+*/
+
+/*特制遮罩层*/
+.modal-mask1{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 900;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.modal-content{
+    background:rgb(36, 35, 35);
+    width: 100%;
+    height: 400rpx;
+}
+
+/*显示和隐藏动画*/
+.modal-show{
+    animation: show1 0.4s linear infinite;
+    animation-iteration-count: 1;
+}
+.modal-hide{
+    animation: hide1 0.4s linear infinite;
+    animation-iteration-count: 1;
+}
+
+.content-item{
+    margin:50rpx 0rpx 0rpx 150rpx;
+}
+.content-item:nth-child(1){
+     margin:30rpx 0rpx 0rpx 150rpx;
+}
+
+.item-title{
+    color: white;
+    font-size: 14px;
+    margin-right: 10rpx;
+}
+
+.item-sli{
+    width: 50%;
+    display: inline-block;
+}
+/*出现动画*/         
+@keyframes show1 {
+    from {
+        height: 0rpx;
+    }
+    to {
+        height: 400rpx;
+    }
+}
+
+/*结束动画*/         
+@keyframes hide1 {
+    from {
+        height: 400rpx;
+    }
+    to {
+        height: 0rpx;
+    }
+}
